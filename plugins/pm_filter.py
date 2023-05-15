@@ -807,7 +807,7 @@ async def auto_filter(client, msg, spoll=False):
     if imdb and imdb.get('poster'):
         try:
             if settings["auto_delete"]:
-                k = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024] + "\n\n<i>⚠️ This message will be auto delete after One Hours to avoid copyright issues.</i>", reply_markup=InlineKeyboardMarkup(btn))
+                k = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024] + "\n\n<i>⚠️ This message will be auto delete after ten minutes to avoid copyright issues.</i>", reply_markup=InlineKeyboardMarkup(btn))
                 await asyncio.sleep(600)
                 await k.delete()
                 try:
@@ -820,7 +820,7 @@ async def auto_filter(client, msg, spoll=False):
             pic = imdb.get('poster')
             poster = pic.replace('.jpg', "._V1_UX360.jpg")
             if settings["auto_delete"]:
-                k = await message.reply_photo(photo=poster, caption=cap[:1024] + "\n\n<i>⚠️ This message will be auto delete after One Hours to avoid copyright issues.</i>", reply_markup=InlineKeyboardMarkup(btn))
+                k = await message.reply_photo(photo=poster, caption=cap[:1024] + "\n\n<i>⚠️ This message will be auto delete after ten minutes to avoid copyright issues.</i>", reply_markup=InlineKeyboardMarkup(btn))
                 await asyncio.sleep(600)
                 await k.delete()
                 try:
@@ -832,7 +832,7 @@ async def auto_filter(client, msg, spoll=False):
         except Exception as e:
             logger.exception(e)
             if settings["auto_delete"]:
-                k = await message.reply_text(cap + "\n\n<i>⚠️ This message will be auto delete after One Hours to avoid copyright issues.</i>", reply_markup=InlineKeyboardMarkup(btn), disable_web_page_preview=True)
+                k = await message.reply_text(cap + "\n\n<i>⚠️ This message will be auto delete after ten minutes to avoid copyright issues.</i>", reply_markup=InlineKeyboardMarkup(btn), disable_web_page_preview=True)
                 await asyncio.sleep(600)
                 await k.delete()
                 try:
@@ -843,7 +843,7 @@ async def auto_filter(client, msg, spoll=False):
                 await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn), disable_web_page_preview=True)
     else:
         if settings["auto_delete"]:
-            k = await message.reply_text(cap + "\n\n<i>⚠️ This message will be auto delete after One Hours to avoid copyright issues.</i>", reply_markup=InlineKeyboardMarkup(btn), disable_web_page_preview=True)
+            k = await message.reply_text(cap + "\n\n<i>⚠️ This message will be auto delete after ten minutes to avoid copyright issues.</i>", reply_markup=InlineKeyboardMarkup(btn), disable_web_page_preview=True)
             await asyncio.sleep(600)
             await k.delete()
             try:
