@@ -808,7 +808,7 @@ async def auto_filter(client, msg, spoll=False):
         try:
             if settings["auto_delete"]:
                 k = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024] + "\n\n<i>⚠️ This message will be auto delete after One Hours to avoid copyright issues.</i>", reply_markup=InlineKeyboardMarkup(btn))
-                await asyncio.sleep(3600)
+                await asyncio.sleep(600)
                 await k.delete()
                 try:
                     await message.delete()
@@ -821,7 +821,7 @@ async def auto_filter(client, msg, spoll=False):
             poster = pic.replace('.jpg', "._V1_UX360.jpg")
             if settings["auto_delete"]:
                 k = await message.reply_photo(photo=poster, caption=cap[:1024] + "\n\n<i>⚠️ This message will be auto delete after One Hours to avoid copyright issues.</i>", reply_markup=InlineKeyboardMarkup(btn))
-                await asyncio.sleep(3600)
+                await asyncio.sleep(600)
                 await k.delete()
                 try:
                     await message.delete()
@@ -833,7 +833,7 @@ async def auto_filter(client, msg, spoll=False):
             logger.exception(e)
             if settings["auto_delete"]:
                 k = await message.reply_text(cap + "\n\n<i>⚠️ This message will be auto delete after One Hours to avoid copyright issues.</i>", reply_markup=InlineKeyboardMarkup(btn), disable_web_page_preview=True)
-                await asyncio.sleep(3600)
+                await asyncio.sleep(600)
                 await k.delete()
                 try:
                     await message.delete()
@@ -844,7 +844,7 @@ async def auto_filter(client, msg, spoll=False):
     else:
         if settings["auto_delete"]:
             k = await message.reply_text(cap + "\n\n<i>⚠️ This message will be auto delete after One Hours to avoid copyright issues.</i>", reply_markup=InlineKeyboardMarkup(btn), disable_web_page_preview=True)
-            await asyncio.sleep(3600)
+            await asyncio.sleep(600)
             await k.delete()
             try:
                 await message.delete()
