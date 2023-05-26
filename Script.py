@@ -12,10 +12,10 @@ I will take care of the rest. 😎"""
 ★ Language: <a href=https://www.python.org>Python</a>
 ★ Library: <a href=https://pyrogram.org>Pyrogram</a>"""
 
-    MY_OWNER_TXT = """★ Name: naruto
-★ Username: @abhithemachineguner
+    MY_OWNER_TXT = """★ Name: aditya
+★ Username: @harrypotter3699
 ★ ID: <code>5178783941</code>
-★ Country: India 🇱🇰"""
+★ Country: India """
 
     STATUS_TXT = """🗂 Total Files: <code>{}</code>
 👤 Total Users: <code>{}</code>
