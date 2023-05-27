@@ -18,7 +18,7 @@ BOT_TOKEN = environ.get('BOT_TOKEN', '5452406096:AAHuMM98LmRKfa1roT67ChmbyOOgAXp
 
 # Bot pics and stickers
 STICKERS = (environ.get('STICKERS', 'CAACAgIAAxkBAAEGm9hjhf69CtQmXoeQ2HidYCGBFeZ4gAACxgEAAhZCawpKI9T0ydt5RysE CAACAgIAAxkBAAEGm9pjhf7I9jCDh3PpkocMNFcPJfisvwAC0wADVp29CvUyj5fVEvk9KwQ CAACAgIAAxkBAAEGm9xjhf7SH4Yc8EP5yI4e8BTH968ClwACGAADDbbSGX671giQDJU8KwQ')).split()
-PICS = (environ.get('PICS', 'https://telegra.ph/file/0360fce3dd5b5b2e5407b.jpg')).split()
+PICS = (environ.get('PICS', 'https://telegra.ph/file/3c1658758865c76054cfb.jpg')).split()
 
 # Bot Admins
 ADMINS = [int(admins) if id_pattern.search(admins) else admins for admins in environ.get('ADMINS', '5397893493').split()]
@@ -26,7 +26,7 @@ auth_users = [int(auth_users) if id_pattern.search(auth_users) else auth_users f
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 
 # Channels
-INDEX_CHANNELS = [int(index_channels) if id_pattern.search(index_channels) else index_channels for index_channels in environ.get('INDEX_CHANNELS', '-1001969299494 -1001543052371').split()]
+INDEX_CHANNELS = [int(index_channels) if id_pattern.search(index_channels) else index_channels for index_channels in environ.get('INDEX_CHANNELS', '-1001969299494 -1001543052371 -1001941735016').split()]
 auth_channel = environ.get('AUTH_CHANNEL', '-1001910257666')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001974014200'))
