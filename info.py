@@ -26,7 +26,7 @@ auth_users = [int(auth_users) if id_pattern.search(auth_users) else auth_users f
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 
 # Channels
-INDEX_CHANNELS = [int(index_channels) if id_pattern.search(index_channels) else index_channels for index_channels in environ.get('INDEX_CHANNELS', '-1001969299494 -1001543052371 -1001941735016').split()]
+INDEX_CHANNELS = [int(index_channels) if id_pattern.search(index_channels) else index_channels for index_channels in environ.get('INDEX_CHANNELS', '-1001543052371 -1001941735016').split()]
 auth_channel = environ.get('AUTH_CHANNEL', '-1001910257666')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001974014200'))
@@ -47,7 +47,7 @@ SPELL_CHECK = is_enabled(environ.get("SPELL_CHECK", "True"), True)
 SHORTLINK = is_enabled((environ.get('SHORTLINK', "True")), True)
 AUTO_DELETE = is_enabled((environ.get('AUTO_DELETE', "True")), False)
 WELCOME = is_enabled((environ.get('WELCOME', "False")), False)
-PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "True")), False)
+PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "Falsee")), False)
 LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False"), False)
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
