@@ -56,8 +56,8 @@ CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "✅ I Found: <code>{query}</code>\n\n🏷 Title: <a href={url}>{title}</a>\n🎭 Genres: {genres}\n📆 Year: <a href={url}/releaseinfo>{year}</a>\n🌟 Rating: <a href={url}/ratings>{rating} / 10</a>\n☀️ Languages: {languages}\n📀 RunTime: {runtime} Minutes\n\n🗣 Requested by: {message.from_user.mention}\n©️ Powered by: <b>{message.chat.title}</b>")
 FILE_CAPTION = environ.get("FILE_CAPTION", "<code>{file_name}</code>")
 MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
-SHORTLINK_URL = environ.get("SHORTLINK_URL", "tinyfy.in")
-SHORTLINK_API = environ.get("SHORTLINK_API", "5a36dc10c3ab82d51214dadf0468a38f91c15ee5")
+SHORTLINK_URL = environ.get("SHORTLINK_URL", "api.shareus.in")
+SHORTLINK_API = environ.get("SHORTLINK_API", "ijkSuvVnN5g8iZji92f5PnDDOBD2")
 WELCOME_TEXT = environ.get("WELCOME_TEXT", "Hello {mention}, Welcome to {title} group!")
                            
 # Log
